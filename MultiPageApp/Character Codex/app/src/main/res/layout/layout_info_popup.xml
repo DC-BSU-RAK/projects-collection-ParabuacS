@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom made popup suggested by Gemini-->
+<!--The reason for this is so the popup matches the app aesthetic-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_margin="20dp"
+    android:gravity="center">
+
+    <!--The icon was taken from Android Studio's resources, not something I added-->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        app:tint="@color/codex_accent_green"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to Use Character Codex"
+        android:textColor="@color/codex_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="serif" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1. Tap the '+' button to draft a new character persona.
+        \n\n2. Fill in the name, role, and backstory to save them to your library.
+        \n\n3. Tap any character card to view their full profile and edit.
+        \n\n4. Visit your Author Profile to see your total collection."
+        android:textColor="@color/codex_gray"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp" />
+
+    <Button
+        android:id="@+id/btnDismissPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Okay"
+        android:backgroundTint="@color/codex_dark_green"
+        android:textColor="@color/codex_white"
+        android:textStyle="bold" />
+
+</LinearLayout>

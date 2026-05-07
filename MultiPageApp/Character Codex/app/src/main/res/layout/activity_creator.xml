@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/codex_black"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+        <!--Currently, I did NOT find a way to allocate an image-->
+        <TextView
+            android:id="@+id/txtCreatorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="serif"
+            android:text="New Persona"
+            android:textColor="@color/codex_white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgAvatarPlaceholder"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintTop_toBottomOf="@id/txtCreatorTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/codex_dark_green" />
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Go Back"
+            android:src="@drawable/backarrow"
+            app:layout_constraintEnd_toStartOf="@+id/txtCreatorTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Inputting name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Character Name"
+            android:textColorHint="@color/codex_gray"
+            app:boxStrokeColor="@color/codex_dark_green"
+            app:hintTextColor="@color/codex_accent_green"
+            app:layout_constraintTop_toBottomOf="@id/imgAvatarPlaceholder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCharacterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/codex_white"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Inputting role as a text-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutRole"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Role (e.g. The Protagonist)"
+            android:textColorHint="@color/codex_gray"
+            app:boxStrokeColor="@color/codex_dark_green"
+            app:hintTextColor="@color/codex_accent_green"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCharacterRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/codex_white"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Bio is a huge field, which forces me to use ScrollView in the details page-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutBio"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Character Backstory &amp; Traits"
+            android:textColorHint="@color/codex_gray"
+            app:boxStrokeColor="@color/codex_dark_green"
+            app:hintTextColor="@color/codex_accent_green"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutRole">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCharacterBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="5"
+                android:gravity="top"
+                android:textColor="@color/codex_white"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnSaveCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="Save to Codex"
+            android:backgroundTint="@color/codex_dark_green"
+            android:textColor="@color/codex_white"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutBio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom made character card suggested by Gemini-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Turning the normal color into a solid onbject-->
+    <solid android:color="@color/codex_black" />
+    <!--This is the border of the card-->
+    <stroke
+        android:width="2dp"
+        android:color="@color/codex_dark_green" />
+    <!--Rounded corners-->
+    <corners android:radius="12dp" />
+    <!--Note that the card can increase in length, width, or height
+    depending on the content inside-->
+</shape>
