@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MLBB Hero Synergy</string>
+
+    <string-array name="laneNames">
+        <item>Select Lane...</item>
+        <item>Mid Lane (Mage/Utility)</item>
+        <item>Roam (Tank/Support)</item>
+        <item>Jungle (Assassin/Tank/Fighter)</item>
+        <item>Exp Lane (Fighter/Sustain)</item>
+        <item>Gold Lane (Marksman/DPS)</item>
+    </string-array>
+
+    <string name="splashTitle">MLBB SYNERGY</string>
+    <string name="splashLoading">Organizing Draft...</string>
+
+    <string name="dialog">Okay</string>
+    <string name="resultTitle">Draft Synergy Score</string>
+    <string name="incompleteMessage">Incomplete draft, all 5 players must have assigned lanes.</string>
+
+    <string name="mythic">Flawless Synergy!</string>
+    <string name="legend">Decent Draft</string>
+    <string name="epic">Epical Glory</string>
+    <string name="warrior">Surrender ASAP</string>
+
+    <string name="help">Help</string>
+    <string name="instructionTitle">How to Use</string>
+    <string name="instructionBody">1. Select a Lane for each player.
+        \n2. Enter the Hero Name for each selection.
+        \n3. Check any applicable composition tags.
+        \n4. Press the Analyze button to receive your synergy score.</string>
+</resources>

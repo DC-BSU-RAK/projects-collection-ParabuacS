@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mlbackground">
+<!--putting everything into a ScrollView-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <!--LinearLayout makes the layering and design easier-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!--everything is wrapped around multiple LinearLayouts-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draft Analyzer"
+                android:textColor="#FFD700"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/help"
+                android:textSize="12sp"
+                android:textColor="@color/white" />
+            <!--Putting lane and hero inputs into a grid, then inside LinearLayouts-->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <LinearLayout android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="4dp" android:background="@color/black">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Player 1" android:textColor="#FFD700" android:textSize="12sp"/>
+                    <Spinner android:id="@+id/spinnerP1" android:layout_width="match_parent" android:layout_height="48dp" android:entries="@array/laneNames" android:backgroundTint="#FFD700"/>
+                    <EditText android:id="@+id/P1Hero" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Hero Name" android:textColorHint="#686868" android:textColor="@color/white" android:textSize="14sp" android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="4dp" android:background="@color/black">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Player 2" android:textColor="#FFD700" android:textSize="12sp"/>
+                    <Spinner android:id="@+id/spinnerP2" android:layout_width="match_parent" android:layout_height="48dp" android:entries="@array/laneNames" android:backgroundTint="#FFD700" />
+                    <EditText android:id="@+id/P2Hero" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Hero Name" android:textColorHint="#686868" android:textColor="@color/white" android:textSize="14sp" android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="4dp" android:background="@color/black" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Player 3" android:textColor="#FFD700" android:textSize="12sp"/>
+                    <Spinner android:id="@+id/spinnerP3" android:layout_width="match_parent" android:layout_height="48dp" android:entries="@array/laneNames" android:backgroundTint="#FFD700" />
+                    <EditText android:id="@+id/P3Hero" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Hero Name" android:textColorHint="#686868" android:textColor="@color/white" android:textSize="14sp" android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="4dp" android:background="@color/black" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Player 4" android:textColor="#FFD700" android:textSize="12sp"/>
+                    <Spinner android:id="@+id/spinnerP4" android:layout_width="match_parent" android:layout_height="48dp" android:entries="@array/laneNames" android:backgroundTint="#FFD700" />
+                    <EditText android:id="@+id/P4Hero" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Hero Name" android:textColorHint="#686868" android:textColor="@color/white" android:textSize="14sp" android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="4dp" android:background="@color/black" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Player 5" android:textColor="#FFD700" android:textSize="12sp"/>
+                    <Spinner android:id="@+id/spinnerP5" android:layout_width="match_parent" android:layout_height="48dp" android:entries="@array/laneNames" android:backgroundTint="#FFD700" />
+                    <EditText android:id="@+id/P5Hero" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Hero Name" android:textColorHint="#686868" android:textColor="@color/white" android:textSize="14sp" android:inputType="textCapWords" />
+                </LinearLayout>
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team Composition Tags:"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:background="@color/black"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black">
+                <CheckBox android:id="@+id/cbCC" android:text="CC" android:textColor="#FFFFFF" android:minHeight="48dp" />
+                <CheckBox android:id="@+id/cbBurst" android:text="Burst" android:textColor="#FFFFFF" android:minHeight="48dp" />
+                <CheckBox android:id="@+id/cbSustain" android:text="Sustain" android:textColor="#FFFFFF" android:minHeight="48dp" />
+                <CheckBox android:id="@+id/cbMobility" android:text="Mobility" android:textColor="#FFFFFF" android:minHeight="48dp" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btnAnalyze"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Analyze Draft Synergy"
+                android:backgroundTint="#4B0082"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <!--Instead of a separate splash xml file, Gemini suggested that I do this instead-->
+    <!--This will overlay as the loading screen when the app opens-->
+    <LinearLayout
+        android:id="@+id/splashScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A1A1A"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/splashTitle" android:textColor="#FFD700" android:textSize="28sp" android:textStyle="bold" />
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:indeterminateTint="#FFD700" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
